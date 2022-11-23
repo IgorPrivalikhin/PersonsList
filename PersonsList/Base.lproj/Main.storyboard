@@ -102,7 +102,7 @@
                 <navigationController id="2yJ-Ta-jaY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Person" image="person.fill" catalog="system" id="ekz-g3-KPk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Tgk-i9-xn8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
