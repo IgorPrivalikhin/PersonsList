@@ -10,18 +10,18 @@ import UIKit
 class DetailsInfoViewController: UIViewController {
 
     
-    @IBOutlet var phonePerson: UILabel!
+    @IBOutlet var phoneNumberLabel: UILabel!
     
-    @IBOutlet var emailPerson: UILabel!
+    @IBOutlet var emailLabel: UILabel!
     
     var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        phonePerson.text = person.phone
-        emailPerson.text = person.email
-        self.title = person.fullName
+
+        title = person.fullName
+        emailLabel.text = "Email: \(person.email)"
+        phoneNumberLabel.text = "Phone: \(person.phone)"
     }
-    
 
 }

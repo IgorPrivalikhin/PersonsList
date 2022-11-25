@@ -11,7 +11,16 @@ class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewControllers()
+    }
+    
+    private func setupViewControllers() {
+        guard let contactListVC = viewControllers?.first as? PersonViewController else { return }
+        guard let sectionVC = viewControllers?.last as? PersonViewTwoController else { return }
         
+        let persons = Person.getContactList()
+        contactListVC.persons = persons
+        sectionVC.persons = persons
         
         let tabBarAppearance = UITabBarAppearance() //UITabBarAppearance класс отвечающий за внешний вид TB, создали его экземпляр
         tabBarAppearance.configureWithOpaqueBackground()

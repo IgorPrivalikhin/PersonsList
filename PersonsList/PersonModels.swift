@@ -6,10 +6,10 @@
 //
 
 struct Person {
-    var name: String
-    var surname: String
-    var email: String
-    var phone: String
+    let name: String
+    let surname: String
+    let email: String
+    let phone: String
     
     var fullName: String{
         "\(name) \(surname)"
@@ -17,15 +17,46 @@ struct Person {
 }
 
 extension Person {
-    static func getList() -> [Person] {
-        var names = DataStore.shared.namesArray
-        var surnames = DataStore.shared.surnamesArray
-        var emails = DataStore.shared.emailArray
-        var telNumbers = DataStore.shared.telNumberArray
+    static func getContactList() -> [Person] {
         
         var persons: [Person] = []
         
-        for _ in 1...names.count {
+        let names = DataStore.shared.namesArray.shuffled()
+        let surnames = DataStore.shared.surnamesArray.shuffled()
+        let emails = DataStore.shared.emailArray.shuffled()
+        let telNumbers = DataStore.shared.telNumberArray.shuffled()
+        
+        
+        let iterationCount = min(
+            names.count,
+            surnames.count,
+            emails.count,
+            telNumbers.count
+        )
+        
+        for index in 0..<iterationCount {
+            let person = Person(
+                name: names[index],
+                surname: surnames[index],
+                email: emails[index],
+                phone: telNumbers[index]
+            )
+            
+            persons.append(person)
+        }
+        
+        return persons
+    }
+}
+
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
+}
+
+
+
+        /* for _ in 1...names.count {
             var nameValue = ""
             var surnameValue = ""
             var emailValue = ""
@@ -49,5 +80,5 @@ extension Person {
         return persons
     }
 }
-                
+                */
         
