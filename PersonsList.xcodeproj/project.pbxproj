@@ -69,7 +69,7 @@
 				7FEC3139292D4BD1008ED057 /* Services */,
 				7FEC3123292CF31F008ED057 /* SceneDelegate.swift */,
 				7FEC31422930F3FC008ED057 /* ViewControllers */,
-				7FEC3135292CFDFF008ED057 /* PersonModels.swift */,
+				7FEC31462930F514008ED057 /* Models */,
 				7FEC31442930F471008ED057 /* StoryBoards */,
 				7FEC31432930F44F008ED057 /* Resources */,
 				7FEC31452930F487008ED057 /* App */,
@@ -121,6 +121,14 @@
 				7FEC312F292CF320008ED057 /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		7FEC31462930F514008ED057 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FEC3135292CFDFF008ED057 /* PersonModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
